@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Landscape of Artificial Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 384px;
+            }
+        }
+        .flow-arrow {
+            color: #008DDA;
+            font-size: 2.5rem;
+            line-height: 1;
+            align-self: center;
+            transform: rotate(90deg);
+        }
+        @media (min-width: 768px) {
+            .flow-arrow {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-[#004AAD] text-white text-center py-12 px-6">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4">The Landscape of Artificial Intelligence</h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto text-[#ACE2E1]">A visual guide to understanding the core concepts of AI. Artificial Intelligence is broadly categorized in two primary ways: by its capabilities, which describes what it can do, and by its functionality, which explains how it works.</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="capabilities" class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-[#004AAD] mb-4">Classification by Capability: The 'What'</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10">This classification defines AI based on its potential power and likeness to human intelligence. It represents an evolutionary path from simple, task-specific systems to theoretical, all-encompassing intellects.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-5xl mb-3">🤖</div>
+                    <h3 class="text-2xl font-bold text-[#004AAD] mb-2">Narrow AI (ANI)</h3>
+                    <p class="mb-3">Designed for a single, specific task. This is the only form of AI that exists today.</p>
+                    <span class="inline-block bg-[#ACE2E1] text-[#004AAD] text-sm font-bold px-3 py-1 rounded-full">Exists Today</span>
+                </div>
+                <div class="flow-arrow font-black hidden md:block">→</div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-5xl mb-3">🧠</div>
+                    <h3 class="text-2xl font-bold text-[#004AAD] mb-2">General AI (AGI)</h3>
+                    <p class="mb-3">A theoretical AI with human-level intelligence that can understand and perform various tasks.</p>
+                    <span class="inline-block bg-yellow-200 text-yellow-800 text-sm font-bold px-3 py-1 rounded-full">Theoretical</span>
+                </div>
+                 <div class="flow-arrow font-black hidden md:block">→</div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-5xl mb-3">🌌</div>
+                    <h3 class="text-2xl font-bold text-[#004AAD] mb-2">Super AI (ASI)</h3>
+                    <p class="mb-3">A hypothetical AI that surpasses human intelligence in every conceivable aspect.</p>
+                    <span class="inline-block bg-red-200 text-red-800 text-sm font-bold px-3 py-1 rounded-full">Speculative</span>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-center text-[#004AAD] mb-2">Current AI Reality</h3>
+                <p class="text-center mb-4">This chart clearly illustrates a key point: 100% of the AI systems we use today, from the simplest apps to the most advanced models, fall under the category of Narrow AI.</p>
+                <div class="chart-container h-80 md:h-96">
+                    <canvas id="capabilityChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="functionality" class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-[#004AAD] mb-4">Classification by Functionality: The 'How'</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10">This classification focuses on how AI systems operate and interact with the world. It defines their internal mechanisms, such as their ability to use memory and learn from experience.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-[#004AAD] mb-2">Reactive Machines</h3>
+                    <p>The most basic AI. It responds to immediate inputs but has no memory or ability to learn from the past. <br><strong>Example:</strong> IBM's Deep Blue chess computer.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-[#004AAD] mb-2">Limited Memory AI</h3>
+                    <p>Uses recent past data to make decisions. Most modern AI applications fall into this category. <br><strong>Example:</strong> Self-driving cars, recommendation engines.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-[#004AAD] mb-2">Theory of Mind AI</h3>
+                    <p>A theoretical next step where AI understands human emotions, beliefs, and social cues. <br><strong>Example:</strong> Truly empathetic AI companions (hypothetical).</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-[#004AAD] mb-2">Self-Aware AI</h3>
+                    <p>The ultimate hypothetical stage of AI with consciousness and self-awareness. <br><strong>Example:</strong> Sentient beings from science fiction.</p>
+                </div>
+            </div>
+
+             <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-center text-[#004AAD] mb-2">Functional AI: Learning & Memory Comparison</h3>
+                <p class="text-center mb-4">This bar chart visually compares the learning and memory capacity across the four functional types. It highlights the significant leap from reactive systems to memory-based AI and the theoretical potential of future systems.</p>
+                <div class="chart-container h-80 md:h-96">
+                    <canvas id="functionalityChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="applications" class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-[#004AAD] mb-4">AI We Use Today: A Closer Look</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10">All current AI is Narrow AI, but it is powered by a variety of sophisticated technologies. This section explores the composition of common AI applications and key milestones in its development.</p>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg mb-12">
+                <h3 class="text-2xl font-bold text-center text-[#004AAD] mb-2">Composition of Modern AI Applications</h3>
+                <p class="text-center mb-4">This chart shows how different underlying technologies, like Machine Learning and Natural Language Processing, are combined to build the AI tools we interact with daily.</p>
+                <div class="chart-container h-96 md:h-[450px]">
+                    <canvas id="applicationChart"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                 <h3 class="text-2xl font-bold text-center text-[#004AAD] mb-6">Key Milestones in AI Development</h3>
+                 <div class="relative pl-6 border-l-4 border-[#008DDA]">
+                    <div class="mb-8">
+                        <div class="absolute w-6 h-6 bg-[#004AAD] rounded-full -left-3.5 border-4 border-white"></div>
+                        <h4 class="text-lg font-bold text-[#004AAD]">1950 - The Turing Test</h4>
+                        <p>Alan Turing proposes a test for machine intelligence, laying the philosophical groundwork for AI.</p>
+                    </div>
+                    <div class="mb-8">
+                         <div class="absolute w-6 h-6 bg-[#004AAD] rounded-full -left-3.5 border-4 border-white"></div>
+                        <h4 class="text-lg font-bold text-[#004AAD]">1956 - "Artificial Intelligence" is Coined</h4>
+                        <p>John McCarthy coins the term at the Dartmouth Workshop, formally establishing AI as a field of research.</p>
+                    </div>
+                     <div class="mb-8">
+                         <div class="absolute w-6 h-6 bg-[#004AAD] rounded-full -left-3.5 border-4 border-white"></div>
+                        <h4 class="text-lg font-bold text-[#004AAD]">1997 - Deep Blue vs. Kasparov</h4>
+                        <p>IBM's Deep Blue, a reactive machine, defeats world chess champion Garry Kasparov, a major public milestone.</p>
+                    </div>
+                    <div>
+                         <div class="absolute w-6 h-6 bg-[#004AAD] rounded-full -left-3.5 border-4 border-white"></div>
+                        <h4 class="text-lg font-bold text-[#004AAD]">2010s - Deep Learning Revolution</h4>
+                        <p>Advances in deep learning lead to breakthroughs in image recognition, NLP, and the rise of modern AI assistants and generative models.</p>
+                    </div>
+                 </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="bg-[#004AAD] text-white text-center p-6">
+        <p class="text-[#ACE2E1]">Infographic created to visualize the core concepts of Artificial Intelligence.</p>
+    </footer>
+
+    <script>
+        const wrapLabel = (label, maxWidth) => {
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + words[i].length + 1 < maxWidth) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        };
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
+        };
+        
+        const sharedTooltipOptions = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            }
+        };
+
+        const capabilityCtx = document.getElementById('capabilityChart').getContext('2d');
+        new Chart(capabilityCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Narrow AI (Current Reality)', 'General AI (Theoretical)', 'Super AI (Theoretical)'],
+                datasets: [{
+                    label: 'Current State of AI',
+                    data: [100, 0, 0],
+                    backgroundColor: ['#008DDA', '#4A5568', '#2D3748'],
+                    borderColor: '#ffffff',
+                    borderWidth: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                           color: '#1f2937'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                cutout: '70%'
+            }
+        });
+
+        const functionalityCtx = document.getElementById('functionalityChart').getContext('2d');
+        new Chart(functionalityCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Reactive Machines', 'Limited Memory AI', 'Theory of Mind AI', 'Self-Aware AI'],
+                datasets: [{
+                    label: 'Relative Learning & Memory Capacity',
+                    data: [5, 40, 85, 100],
+                    backgroundColor: ['#ACE2E1', '#41C9E2', '#008DDA', '#004AAD'],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        ticks: { color: '#1f2937' },
+                        grid: { color: '#e2e8f0' }
+                    },
+                    y: {
+                        ticks: { color: '#1f2937' },
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const applicationCtx = document.getElementById('applicationChart').getContext('2d');
+        const rawLabels = ['Virtual Assistants (Siri, Alexa)', 'Recommendation Engines', 'Self-Driving Car Systems', 'Generative AI (Text & Image)'];
+        new Chart(applicationCtx, {
+            type: 'bar',
+            data: {
+                labels: rawLabels.map(label => wrapLabel(label, 16)),
+                datasets: [{
+                    label: 'Machine Learning',
+                    data: [40, 60, 50, 45],
+                    backgroundColor: '#004AAD',
+                }, {
+                    label: 'Natural Language Processing',
+                    data: [50, 10, 5, 45],
+                    backgroundColor: '#008DDA',
+                }, {
+                    label: 'Computer Vision',
+                    data: [0, 5, 40, 5],
+                    backgroundColor: '#41C9E2',
+                },
+                {
+                    label: 'Expert Systems & Other',
+                    data: [10, 25, 5, 5],
+                    backgroundColor: '#ACE2E1',
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        stacked: true,
+                        ticks: { color: '#1f2937' },
+                        grid: { display: false }
+                    },
+                    y: {
+                        stacked: true,
+                        ticks: { color: '#1f2937' },
+                        grid: { color: '#e2e8f0' }
+                    }
+                },
+                 plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                           color: '#1f2937'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
