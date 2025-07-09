@@ -196,10 +196,10 @@ Let’s make this a flagship piece in your AI storytelling toolkit.
 
 ```mermaid
 graph TD
-    A[DSS Data Preparation] --> B[Bank Asia Pre-processing & Upload]
-    B --> C[Payment Gateway Validation & Approval]
-    C --> D[OMNI Channel Verification & Approval]
-    D --> E[ABS Account Creation (Credit-only)]
-    E --> F[Agent Outlet Activation (Full KYC)]
-    F --> G[Disbursement via EFT]
+    A["DSS Data Preparation"] --> B["Bank Asia Pre-processing & Upload"]
+    B --> C["Payment Gateway Validation & Approval"]
+    C --> D["OMNI Channel Verification & Approval"]
+    D --> E["ABS Account Creation (Credit-only)"]
+    E --> F["Agent Outlet Activation (Full KYC)"]
+    F --> G["Disbursement via EFT"]
 ```
