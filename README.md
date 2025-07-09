@@ -196,13 +196,3 @@ Would you like me to help you:
 - Add **gender/demographic filters** for deeper insights?
 
 Let’s make this a flagship piece in your AI storytelling toolkit.
-
-```mermaid
-graph TD
-    A["DSS Data Preparation"] --> B["Bank Asia Pre-processing & Upload"]
-    B --> C["Payment Gateway Validation & Approval"]
-    C --> D["OMNI Channel Verification & Approval"]
-    D --> E["ABS Account Creation (Credit-only)"]
-    E --> F["Agent Outlet Activation (Full KYC)"]
-    F --> G["Disbursement via EFT"]
-```
