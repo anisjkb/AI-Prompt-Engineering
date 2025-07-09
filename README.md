@@ -15,20 +15,23 @@ Customer Activities → RPA → AI Agent → Compliance Desk
 
 ### 🔁 Full Process Flow
 
+When you have parentheses or hyphens inside a node-label, you need to wrap that entire label in a single-quoted string (or escape the special chars). For example:
+
 ```mermaid
 graph TD
-    A[Customer Login / Transaction] --> B[RPA Bot Monitors Activity]
-    B --> C{Suspicious Pattern?}
-    C -- No --> Z[End]
-    C -- Yes --> D[AI Agent Analyzes Context]
-    D --> E{High Risk?}
-    E -- No --> Z
-    E -- Yes --> F[AI Triggers Account Freeze via RPA]
-    F --> G[AI Sends Alert to Compliance Officer]
-    G --> H[Officer Reviews & Resolves]
+    A["DSS Data Preparation"] --> B["Bank Asia Pre-processing & Upload"]
+    B --> C["Payment Gateway Validation & Approval"]
+    C --> D["OMNI Channel Verification & Approval"]
+    D --> E['ABS Account Creation (Credit-only)']
+    E --> F['Agent Outlet Activation (Full KYC)']
+    F --> G["Disbursement via EFT"]
 ```
 
----
+Key points:  
+- Use `["…"]` or `['…']` around the entire label.  
+- If you still hit issues, switch to single quotes for that node (as shown for E & F).  
+- Avoid unescaped hyphens and parentheses outside of quotes.
+
 
 ## 💼 Real Example: AML Compliance in Dhaka Branch
 
